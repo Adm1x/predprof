@@ -25,8 +25,3 @@ with open('vacancy_new.csv', encoding=utf-8) as data_file:
                 better_work = vacancy[n]
     print(better_work)
     vacancy.pop(n)
-
-
-for i in range:
-
-    print(salary[j])
