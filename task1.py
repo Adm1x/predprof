@@ -7,10 +7,10 @@
 """
 from csv import reader
 with open('vacancy_new.csv', encoding=utf-8) as data_file:
-    #преобразуем полученный файл к списку
-    vacancy=list(data_file)
+    """преобразуем полученный файл к списку"""
+    vacancy=list(reader(data_file,delimiter="-"))
     vacancy.pop(1)
-    vacancy.pop(2)
+    vacancy.pop(1)
     """реализуем цикл отбора для зарплат
     
     vacancy-значение находящееся в списке под определенным номером
@@ -23,5 +23,13 @@ with open('vacancy_new.csv', encoding=utf-8) as data_file:
                 better_work = vacancy[n+1]
             else:
                 better_work = vacancy[n]
+    """
+    Выводим данные об одной из самых высоокоплачиваемых профессий
+    
+    """
     print(better_work)
+    """
+    Удаляем данные во избежании дублирования информации и повторяем цикл
+    
+    """
     vacancy.pop(n)
